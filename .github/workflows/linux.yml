@@ -16,11 +16,11 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-22.04]
-        arch: [arm64-v8a]
+        arch: [aarch64]
         mode: [debug, releasedbg]
 
     runs-on: ${{ matrix.os }}
-    if: "!contains(github.event.head_commit.message, 'ci skip')"
+    if: ${{ !contains(github.event.head_commit.message, 'ci skip') }}
 
     steps:
     - uses: actions/checkout@v2

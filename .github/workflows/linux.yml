@@ -1,6 +1,11 @@
 name: Build linux
 
 on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to release"
+        required: true
   pull_request:
   push:
     branches:

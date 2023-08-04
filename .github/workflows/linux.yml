@@ -63,7 +63,7 @@ jobs:
     - name: Install
     run: xmake install -o packaged
 
-    Upload artifacts
+    # Upload artifacts
     - uses: actions/upload-artifact@v2
      with:
        name: ${{ matrix.os }}-${{ matrix.arch }}-${{ matrix.mode }}
